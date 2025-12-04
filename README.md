@@ -21,17 +21,17 @@ After downloading the dataset, run the preprocessing notebooks in order:
 1. **`institute_level_data_processing.ipynb`** — performs initial cleaning and feature engineering for institute level data.  
 2. **`course_level_data_processing.ipynb`** — performs initial cleaning for field of study data.
 
-📌 Both notebooks are located in the [`notebooks/`](./notebooks/data_processing/).
+📌 Both notebooks are located in the [`notebooks/data_processing/`](./notebooks/data_processing/).
 
 ---
 
 ### 3. Output - processed data
 The cleaned and merged dataset will be saved to: [`data/processed/`](./data/processed)
 
-📌 notebooks are located in the [`notebooks/`](./notebooks/modeling/).
-
 ## 🧠 Modeling
 Full model builds (classification/regression) and visual diagnostics that feed the final app/ranker.
+
+📌 notebooks are located in the [`notebooks/modeling/`](./notebooks/modeling/).
 
 ### 1. [`ML_value_&_quality_level_classification_&_regression.ipynb`](./notebooks/modeling/ML_value_%26_quality_level_classification_%26_regression.ipynb)
 Value-label classifiers with institution + course aggregates, plus regression on `QUALITY_SCORE` with and without the GRAD_RATE/RET_FT4/MD_EARN_WNE_P10 ingredients to remove leakage so new schools can be scored; notes on parallel earnings regression for student-facing salary predictions.
@@ -48,7 +48,7 @@ Correlation heatmaps and target-wise correlations (QUALITY_SCORE, COSTT4_A, MD_E
 ## 🔍 Exploration
 Drafts, baselines, and feature/location/ROI experiments that informed the final modeling choices.
 
-📌 notebooks are located in the [`notebooks/`](./notebooks/exploration/).
+📌 notebooks are located in the [`notebooks/exploration/`](./notebooks/exploration/).
 
 ### 1. [`ML_models_institute_level_only.ipynb`](./notebooks/exploration/ML_models_institute_level_only.ipynb)
 Initial leak-free VALUE_LABEL classifiers and regressors (dropping COSTT4_A/QUALITY_SCORE from features), plus a user-weighted ranking that mixes value probability, cost, engineering intensity, earnings, and location/sector preferences.
